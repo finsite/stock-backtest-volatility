@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-backtest-volatility
+  labels:
+    app: stock-backtest-volatility
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-backtest-volatility
+  template:
+    metadata:
+      labels:
+        app: stock-backtest-volatility
+    spec:
+      containers:
+      - name: stock-backtest-volatility
+        image: stock-backtest-volatility:latest
+        ports:
+        - containerPort: 8080
