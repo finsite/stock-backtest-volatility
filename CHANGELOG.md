@@ -11,13 +11,14 @@
 
 ### Feat
 
-- update todo and readme for all stock-backtest-* repos
+- update todo and readme for all stock-backtest-\* repos
 
 ## v0.2.0 (2025-06-29)
 
 ### Feat
 
 - remove scripts directory from new repositories
-- add SQLAlchemy and Tenacity to all repos with output dispatching and retry logic
+- add SQLAlchemy and Tenacity to all repos with output dispatching and retry
+  logic
 
 ## v0.0.0 (2025-06-29)

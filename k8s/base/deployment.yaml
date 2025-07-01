@@ -16,7 +16,7 @@ spec:
         app: stock-backtest-volatility
     spec:
       containers:
-      - name: stock-backtest-volatility
-        image: stock-backtest-volatility:latest
-        ports:
-        - containerPort: 8080
+        - name: stock-backtest-volatility
+          image: stock-backtest-volatility:latest
+          ports:
+            - containerPort: 8080
