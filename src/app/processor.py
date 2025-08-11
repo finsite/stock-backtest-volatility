@@ -4,7 +4,7 @@ This module validates incoming messages and computes a backtest signal
 or metric based on volatility analysis. All operations are logged for observability.
 """
 
-from typing import Any, Dict
+from typing import Any
 
 from app.utils.setup_logger import setup_logger
 from app.utils.types import ValidatedMessage
@@ -14,14 +14,16 @@ logger = setup_logger(__name__)
 
 
 def validate_input_message(message: dict[str, Any]) -> ValidatedMessage:
-    """
-    Validate the incoming raw message against the expected schema.
+    """Validate the incoming raw message against the expected schema.
 
-    Parameters:
+    Parameters
+    ----------
         message (dict[str, Any]): The raw message payload.
 
-    Returns:
+    Returns
+    -------
         ValidatedMessage: A validated message object.
+
     """
     logger.debug("🔍 Validating message schema...")
     if not validate_message_schema(message):
@@ -31,17 +33,19 @@ def validate_input_message(message: dict[str, Any]) -> ValidatedMessage:
 
 
 def compute_volatility_signal(message: ValidatedMessage) -> dict[str, Any]:
-    """
-    Compute a volatility-based signal from the validated input message.
+    """Compute a volatility-based signal from the validated input message.
 
     This function is a placeholder for real volatility-based backtest logic.
     It can use metrics such as standard deviation, ATR, or Bollinger Bands.
 
-    Parameters:
+    Parameters
+    ----------
         message (ValidatedMessage): A validated message containing historical data.
 
-    Returns:
+    Returns
+    -------
         dict[str, Any]: A dictionary with the signal and metadata.
+
     """
     logger.debug("📊 Computing volatility signal for: %s", message.get("symbol", "N/A"))
 
